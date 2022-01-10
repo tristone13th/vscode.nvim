@@ -2,19 +2,34 @@ local generate = function()
     local colors = {}
     if vim.g.vscode_style == 'dark' then
         colors = {
+            theme = "#ee8241",
+            functionFg = "#abd166",
+            commentFg = "#c99677",
+            typeFg = "#ee8241",
+            keywordFg = '#9cdcfe',
+            opFg = '#9cdcfe',
+            condFg = "#f7397d",
+            repeatFg = "#f7397d",
+            importFg = "#f7397d",
+            paraFg = '#fa9f50',
+            numFg = "#b5cea8",
+
+
+
+
             vscNone = 'NONE',
-            vscFront = '#D4D4D4',
-            vscBack = '#1E1E1E',
+            vscFront = '#EEFFFF',
+            vscBack = '#131313',
 
-            vscTabCurrent = '#1E1E1E',
+            vscTabCurrent = '#131313',
             vscTabOther = '#2D2D2D',
-            vscTabOutside = '#252526',
+            vscTabOutside = '#191919',
 
-            vscLeftDark = '#252526',
+            vscLeftDark = '#191919',
             vscLeftMid = '#373737',
             vscLeftLight = '#636369',
 
-            vscPopupFront = '#BBBBBB',
+            vscPopupFront = '#ee8241',
             vscPopupBack = '#272727',
             vscPopupHighlightBlue = '#004b72',
             vscPopupHighlightGray = '#343B41',
