@@ -19,7 +19,7 @@ theme.load_syntax = function()
         DiffText = { nil, c.vscDiffRedLight, 'none', nil },
         EndOfBuffer = { c.vscBack, nil, 'none', nil },
         ErrorMsg = { c.vscRed, c.vscBack, 'none', nil },
-        VertSplit = { c.vscSplitDark, c.vscBack, 'none', nil },
+        VertSplit = { c.theme, c.vscBack, 'none', nil },
         Folded = { c.vscLeftLight, c.vscLeftDark, 'underline', nil },
         FoldColumn = { c.vscLineNumber, c.vscBack, 'none', nil },
         SignColumn = { nil, c.vscBack, 'none', nil },
@@ -42,8 +42,8 @@ theme.load_syntax = function()
         Question = { c.vscBlue, c.vscBack, 'none', nil },
         Search = { c.vscNone, c.vscSearch, 'none', nil },
         SpecialKey = { c.vscBlue, c.vscNone, 'none', nil },
-        StatusLine = { c.vscFront, c.vscLeftMid, 'none', nil },
-        StatusLineNC = { c.vscFront, c.vscLeftDark, 'none', nil },
+        StatusLine = { c.vscFront, c.vscBack, 'none', nil },
+        StatusLineNC = { c.vscFront, c.vscBack, 'none', nil },
         TabLine = { c.vscFront, c.vscTabOther, 'none', nil },
         TabLineFill = { c.vscFront, c.vscTabOutside, 'none', nil },
         TabLineSel = { c.vscFront, c.vscTabCurrent, 'none', nil },
@@ -52,6 +52,7 @@ theme.load_syntax = function()
         VisualNOS = { c.vscNone, c.vscSelection, 'none', nil },
         WarningMsg = { c.vscRed, c.vscBack, 'bold', nil },
         WildMenu = { c.vscNone, c.vscSelection, 'none', nil },
+
         Comment = { c.commentFg, nil, isItalic and 'italic' or 'none', nil },
         Constant = { c.vscBlue, nil, 'none', nil },
         String = { c.commentFg, nil, 'none', nil },
@@ -420,15 +421,15 @@ theme.load_syntax = function()
         NvimTreeEmptyFolderName = { c.vscGray, nil, 'none', nil },
         NvimTreeFolderName = { c.vscFront, nil, 'none', nil },
         NvimTreeSpecialFile = { c.vscPink, nil, 'underline', nil },
-        NvimTreeNormal = { c.vscFront, c.vscLeftDark, 'none', nil },
+        NvimTreeNormal = { c.vscFront, c.vscBack, 'none', nil },
         NvimTreeCursorLine = { nil, c.vscLeftMid, 'none', nil },
         NvimTreeVertSplit = { c.vscBack, c.vscBack, 'none', nil },
         NvimTreeEndOfBuffer = { c.vscLeftDark, nil, 'none', nil },
         NvimTreeOpenedFolderName = { nil, c.vscLeftDark, 'none', nil },
 
         -- Bufferline
-        BufferLineIndicatorSelected = { c.vscLeftDark, nil, 'none', nil },
-        BufferLineFill = { nil, c.vscLeftDark, 'none', nil },
+        BufferLineIndicatorSelected = { c.theme, c.theme, 'none', nil },
+        BufferLineFill = { c.theme, c.theme, 'none', nil },
 
         -- BarBar
         BufferCurrent = { c.vscFront, c.vscTabCurrent, 'none', nil },
@@ -450,8 +451,8 @@ theme.load_syntax = function()
         BufferTabpagesFill = { c.vscFront, c.vscTabOther, 'none', nil },
 
         -- IndentBlankLine
-        IndentBlanklineContextChar = { c.vscRed, nil, 'nocombine', nil },
-        IndentBlanklineContextStart = { c.vscRed, nil, 'nocombine', nil },
+        IndentBlanklineContextChar = { c.theme, nil, 'nocombine', nil },
+        IndentBlanklineContextStart = { c.theme, nil, 'nocombine', nil },
         IndentBlanklineChar = {
             isDark and c.vscLineNumber or c.vscTabOther,
             nil,

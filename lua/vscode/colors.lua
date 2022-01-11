@@ -14,9 +14,6 @@ local generate = function()
             paraFg = '#fa9f50',
             numFg = "#b5cea8",
 
-
-
-
             vscNone = 'NONE',
             vscFront = '#EEFFFF',
             vscBack = '#131313',
@@ -42,7 +39,7 @@ local generate = function()
             vscCursorDark = '#51504F',
             vscCursorLight = '#AEAFAD',
             vscSelection = '#264F78',
-            vscLineNumber = '#5A5A5A',
+            vscLineNumber = '#474440',
 
             vscDiffRedDark = '#4B1818',
             vscDiffRedLight = '#6F1313',
