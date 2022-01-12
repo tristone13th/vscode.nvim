@@ -1,7 +1,3 @@
--- vscode.nvim color scheme
--- Lua port of https://github.com/tomasiser/vim-code-dark
--- By http://github.com/mofiqul
-
 local utils = require('vscode.utils')
 local vscode = {}
 
