@@ -7,7 +7,6 @@ end
 
 vscode.change_style = function(style)
     vim.g.vscode_style = style
-    print('Vscode style: ', style)
     vim.cmd([[colorscheme vscode]])
 end
 

@@ -19,7 +19,7 @@ theme.load_syntax = function()
         DiffText = { nil, c.vscDiffRedLight, 'none', nil },
         EndOfBuffer = { c.vscBack, nil, 'none', nil },
         ErrorMsg = { c.vscRed, c.vscBack, 'none', nil },
-        VertSplit = { c.theme, c.vscBack, 'none', nil },
+        VertSplit = { c.vscBack, c.vscBack, 'none', nil },
         Folded = { c.vscLeftLight, c.vscLeftDark, 'underline', nil },
         FoldColumn = { c.vscLineNumber, c.vscBack, 'none', nil },
         SignColumn = { nil, c.vscBack, 'none', nil },
@@ -426,6 +426,9 @@ theme.load_syntax = function()
         NvimTreeVertSplit = { c.vscBack, c.vscBack, 'none', nil },
         NvimTreeEndOfBuffer = { c.vscLeftDark, nil, 'none', nil },
         NvimTreeOpenedFolderName = { nil, c.vscLeftDark, 'none', nil },
+
+        -- NeoTree
+        NeoTreeDirectoryIcon = { c.theme, nil, 'none', nil },
 
         -- Bufferline
         BufferLineIndicatorSelected = { c.theme, c.theme, 'none', nil },

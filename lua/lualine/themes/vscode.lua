@@ -38,11 +38,13 @@ vscode.normal = {
 vscode.visual = {
     a = { fg = colors.bg, bg = colors.lightgreen, gui = 'bold' },
     b = { fg = colors.lightgreen, bg = colors.bg },
+    c = { fg = colors.fg, bg = colors.bg },
 }
 
 vscode.inactive = {
-    b = { fg = colors.bg, bg = colors.fg },
-    a = { fg = colors.fg, bg = colors.gray, gui = 'bold' },
+    a = { fg = colors.bg, bg = colors.bg},
+    b = { fg = colors.bg, bg = colors.bg },
+    c = { fg = colors.bg, bg = colors.bg },
 }
 
 vscode.replace = {
