@@ -430,6 +430,9 @@ theme.load_syntax = function()
         -- NeoTree
         NeoTreeDirectoryIcon = { c.theme, nil, 'none', nil },
 
+        -- vim-floaterm
+        FloatermBorder = {c.theme, c.vscBack, "none", nil}, 
+
         -- Bufferline
         BufferLineIndicatorSelected = { c.theme, c.theme, 'none', nil },
         BufferLineFill = { c.theme, c.theme, 'none', nil },
