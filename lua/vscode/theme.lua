@@ -430,6 +430,9 @@ theme.load_syntax = function()
         -- NeoTree
         NeoTreeDirectoryIcon = { c.theme, nil, 'none', nil },
 
+        -- ScrollView
+        ScrollView = {c.theme, c.theme, "none", nil},
+
         -- vim-floaterm
         FloatermBorder = {c.theme, c.vscBack, "none", nil}, 
 
