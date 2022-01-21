@@ -414,27 +414,31 @@ theme.load_syntax = function()
         GitSignsDeleteLn = { c.vscBack, c.vscRed, 'none', nil },
 
         -- NvimTree
-        NvimTreeRootFolder = { c.vscFront, nil, 'bold', nil },
-        NvimTreeGitDirty = { c.vscYellow, nil, 'none', nil },
-        NvimTreeGitNew = { c.vscGreen, nil, 'none', nil },
-        NvimTreeImageFile = { c.vscViolet, nil, 'none', nil },
-        NvimTreeEmptyFolderName = { c.vscGray, nil, 'none', nil },
-        NvimTreeFolderName = { c.vscFront, nil, 'none', nil },
-        NvimTreeSpecialFile = { c.vscPink, nil, 'underline', nil },
-        NvimTreeNormal = { c.vscFront, c.vscBack, 'none', nil },
-        NvimTreeCursorLine = { nil, c.vscLeftMid, 'none', nil },
-        NvimTreeVertSplit = { c.vscBack, c.vscBack, 'none', nil },
-        NvimTreeEndOfBuffer = { c.vscLeftDark, nil, 'none', nil },
-        NvimTreeOpenedFolderName = { nil, c.vscLeftDark, 'none', nil },
+        -- NvimTreeRootFolder = { c.vscFront, nil, 'bold', nil },
+        -- NvimTreeGitDirty = { c.vscYellow, nil, 'none', nil },
+        -- NvimTreeGitNew = { c.vscGreen, nil, 'none', nil },
+        -- NvimTreeImageFile = { c.vscViolet, nil, 'none', nil },
+        -- NvimTreeEmptyFolderName = { c.vscGray, nil, 'none', nil },
+        -- NvimTreeFolderName = { c.vscFront, nil, 'none', nil },
+        -- NvimTreeSpecialFile = { c.vscPink, nil, 'underline', nil },
+        -- NvimTreeNormal = { c.vscFront, c.vscBack, 'none', nil },
+        -- NvimTreeCursorLine = { nil, c.vscLeftMid, 'none', nil },
+        -- NvimTreeVertSplit = { c.vscBack, c.vscBack, 'none', nil },
+        -- NvimTreeEndOfBuffer = { c.vscLeftDark, nil, 'none', nil },
+        -- NvimTreeOpenedFolderName = { nil, c.vscLeftDark, 'none', nil },
+
+        -- Signature
+        LspSignatureActiveParameter = { c.opFg, nil, 'none', nil },
+        FloatBorder = { c.theme, nil, 'none', nil },
 
         -- NeoTree
         NeoTreeDirectoryIcon = { c.theme, nil, 'none', nil },
 
         -- ScrollView
-        ScrollView = {c.theme, c.theme, "none", nil},
+        ScrollView = { c.theme, c.theme, 'none', nil },
 
         -- vim-floaterm
-        FloatermBorder = {c.theme, c.vscBack, "none", nil}, 
+        FloatermBorder = { c.theme, c.vscBack, 'none', nil },
 
         -- Bufferline
         BufferLineIndicatorSelected = { c.theme, c.theme, 'none', nil },
