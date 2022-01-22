@@ -1,5 +1,3 @@
--- Copyright (c) 2020-2021 Mofiqul Islam
--- MIT license, see LICENSE for more details.
 local vscode = {}
 local colors = {}
 
@@ -31,32 +29,56 @@ end
 
 vscode.normal = {
     a = { fg = vim.g.vscode_style == "dark" and colors.bg or colors.fg, bg = colors.theme, gui = 'bold' },
-    b = { fg = colors.theme, bg = colors.bg },
+    b = { fg = colors.fg, bg = colors.bg },
     c = { fg = colors.fg, bg = colors.bg },
+    x = { fg = colors.fg, bg = colors.bg },
+    y = { fg = colors.fg, bg = colors.bg },
+    z = { fg = colors.fg, bg = colors.bg },
+}
+
+vscode.command = {
+    a = { fg = vim.g.vscode_style == "dark" and colors.bg or colors.fg, bg = colors.lightblue, gui = 'bold' },
+    b = { fg = colors.fg, bg = colors.bg },
+    c = { fg = colors.fg, bg = colors.bg },
+    x = { fg = colors.fg, bg = colors.bg },
+    y = { fg = colors.fg, bg = colors.bg },
+    z = { fg = colors.fg, bg = colors.bg },
 }
 
 vscode.visual = {
     a = { fg = colors.bg, bg = colors.lightgreen, gui = 'bold' },
-    b = { fg = colors.lightgreen, bg = colors.bg },
+    b = { fg = colors.fg, bg = colors.bg },
     c = { fg = colors.fg, bg = colors.bg },
+    x = { fg = colors.fg, bg = colors.bg },
+    y = { fg = colors.fg, bg = colors.bg },
+    z = { fg = colors.fg, bg = colors.bg },
 }
 
 vscode.inactive = {
     a = { fg = colors.bg, bg = colors.bg},
     b = { fg = colors.bg, bg = colors.bg },
     c = { fg = colors.bg, bg = colors.bg },
+    x = { fg = colors.bg, bg = colors.bg },
+    y = { fg = colors.bg, bg = colors.bg },
+    z = { fg = colors.bg, bg = colors.bg },
 }
 
 vscode.replace = {
-    b = { fg = colors.yellow, bg = colors.bg },
     a = { fg = vim.g.vscode_style == 'dark' and colors.bg or colors.fg, bg = colors.yellow, gui = 'bold' },
+    b = { fg = colors.fg, bg = colors.bg },
     c = { fg = colors.fg, bg = colors.bg },
+    x = { fg = colors.fg, bg = colors.bg },
+    y = { fg = colors.fg, bg = colors.bg },
+    z = { fg = colors.fg, bg = colors.bg },
 }
 
 vscode.insert = {
     a = { fg = vim.g.vscode_style == 'dark' and colors.bg or colors.fg, bg = colors.pink, gui = 'bold' },
-    b = { fg = colors.pink, bg = colors.bg },
+    b = { fg = colors.fg, bg = colors.bg },
     c = { fg = colors.fg, bg = colors.bg },
+    x = { fg = colors.fg, bg = colors.bg },
+    y = { fg = colors.fg, bg = colors.bg },
+    z = { fg = colors.fg, bg = colors.bg },
 }
 
 return vscode
