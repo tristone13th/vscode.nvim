@@ -345,6 +345,7 @@ theme.load_syntax = function()
         goFunctionCall = { c.vscYellow, nil, 'none', nil },
         goMethodCall = { c.vscYellow, nil, 'none', nil },
         goSingleDecl = { c.vscLightBlue, nil, 'none', nil },
+
         -- Python
         pythonStatement = { c.vscBlue, nil, 'none', nil },
         pythonOperator = { c.vscBlue, nil, 'none', nil },
@@ -425,6 +426,12 @@ theme.load_syntax = function()
         -- NvimTreeVertSplit = { c.vscBack, c.vscBack, 'none', nil },
         -- NvimTreeEndOfBuffer = { c.vscLeftDark, nil, 'none', nil },
         -- NvimTreeOpenedFolderName = { nil, c.vscLeftDark, 'none', nil },
+
+        -- bqf
+        BqfPreviewBorder = { c.theme, nil, 'none', nil },
+        -- BqfPreviewFloat = { c.vscPink, nil, 'none', nil },
+        -- BqfPreviewCursor = { c.vscLightBlue, nil, 'none', nil },
+        -- BqfPreviewRange = { c.vscGreen, nil, 'none', nil },
 
         -- Signature
         LspSignatureActiveParameter = { c.opFg, nil, 'none', nil },
