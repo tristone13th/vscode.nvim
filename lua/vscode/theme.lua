@@ -3,7 +3,6 @@ local theme = {}
 
 theme.load_syntax = function()
     local c = colors.generate()
-    local isDark = vim.g.vscode_style == 'dark'
     local isItalic = vim.g.vscode_italic_comment == 1
     local syntax = {
         -- GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL
@@ -29,10 +28,10 @@ theme.load_syntax = function()
         MatchParen = { c.vscNone, c.vscCursorDark, 'none', nil },
         ModeMsg = { c.vscFront, c.vscLeftDark, 'none', nil },
         MoreMsg = { c.vscFront, c.vscLeftDark, 'none', nil },
-        NonText = { isDark and c.vscLineNumber or c.vscTabOther, c.vscBack, 'none', nil },
+        NonText = { c.vscLineNumber, c.vscBack, 'none', nil },
         Pmenu = { c.vscPopupFront, c.vscPopupBack, 'none', nil },
         PmenuSel = {
-            isDark and c.vscPopupFront or c.vscBack,
+            c.vscPopupFront,
             c.vscPopupHighlightBlue,
             'none',
             nil,
@@ -92,13 +91,13 @@ theme.load_syntax = function()
         SpellCap = { c.vscRed, c.vscBack, 'undercurl', c.vscRed },
         SpellRare = { c.vscRed, c.vscBack, 'undercurl', c.vscRed },
         SpellLocal = { c.vscRed, c.vscBack, 'undercurl', c.vscRed },
-        Whitespace = { isDark and c.vscLineNumber or c.vscTabOther, nil, 'none', nil },
+        Whitespace = { c.vscLineNumber, nil, 'none', nil },
 
         -- Treesitter
         TSError = { c.vscRed, nil, 'none', nil },
         TSPunctBracket = { c.vscFront, nil, 'none', nil },
         TSPunctSpecial = { c.vscFront, nil, 'none', nil },
-        markdownTSPunctSpecial = { isDark and c.vscBlue or c.vscYellowOrange, nil, 'bold', nil },
+        markdownTSPunctSpecial = { c.vscBlue, nil, 'bold', nil },
         TSConstant = { c.vscYellow, nil, 'none', nil },
         TSConstBuiltin = { c.typeFg, nil, 'none', nil },
         TSConstMacro = { c.vscBlueGreen, nil, 'none', nil },
@@ -139,40 +138,40 @@ theme.load_syntax = function()
         TSTag = { c.vscBlue, nil, 'none', nil },
         TSTagDelimiter = { c.vscGray, nil, 'none', nil },
 
-        TSTitle = { isDark and c.vscBlue or c.vscYellowOrange, nil, 'bold', nil },
+        TSTitle = { c.vscBlue, nil, 'bold', nil },
         TSLiteral = { c.vscFront, 'none', nil },
         TSEmphasis = { c.vscFront, nil, 'italic', nil },
-        TSStrong = { isDark and c.vscBlue or c.vscViolet, nil, 'bold', nil },
+        TSStrong = { c.vscBlue, nil, 'bold', nil },
         TSURI = { c.vscFront, nil, 'none', nil },
-        TSTextReference = { isDark and c.vscOrange or c.vscYellowOrange, nil, 'none', nil },
+        TSTextReference = { c.vscOrange, nil, 'none', nil },
         TSPunctDelimiter = { c.vscFront, nil, 'none', nil },
-        TSStringEscape = { isDark and c.vscOrange or c.vscYellowOrange, nil, 'bold', nil },
+        TSStringEscape = { c.vscOrange, nil, 'bold', nil },
 
         TSNote = { c.vscBlueGreen, nil, 'bold', nil },
         TSWarning = { c.vscYellowOrange, nil, 'bold', nil },
         TSDanger = { c.vscRed, nil, 'bold', nil },
 
         -- Markdown
-        markdownBold = { isDark and c.vscBlue or c.vscYellowOrange, nil, 'bold', nil },
+        markdownBold = { c.vscBlue, nil, 'bold', nil },
         markdownCode = { c.vscOrange, nil, 'none', nil },
-        markdownRule = { isDark and c.vscBlue or c.vscYellowOrange, nil, 'bold', nil },
+        markdownRule = { c.vscBlue, nil, 'bold', nil },
         markdownCodeDelimiter = { c.vscFront, nil, 'none', nil },
         markdownHeadingDelimiter = {
-            isDark and c.vscBlue or c.vscYellowOrange,
+            c.vscBlue,
             nil,
             'none',
             nil,
         },
-        markdownFootnote = { isDark and c.vscOrange or c.vscYellowOrange, nil, 'none', nil },
+        markdownFootnote = { c.vscOrange, nil, 'none', nil },
         markdownFootnoteDefinition = {
-            isDark and c.vscOrange or c.vscYellowOrange,
+            c.vscOrange,
             nil,
             'none',
             nil,
         },
         markdownUrl = { c.vscFront, nil, 'underline', nil },
-        markdownLinkText = { isDark and c.vscOrange or c.vscYellowOrange, nil, 'none', nil },
-        markdownEscape = { isDark and c.vscOrange or c.vscYellowOrange, nil, 'none', nil },
+        markdownLinkText = { c.vscOrange, nil, 'none', nil },
+        markdownEscape = { c.vscOrange, nil, 'none', nil },
 
         -- JSON
         jsonKeyword = { c.vscLightBlue, nil, 'none', nil },
@@ -467,19 +466,19 @@ theme.load_syntax = function()
         IndentBlanklineContextChar = { c.theme, nil, 'nocombine', nil },
         IndentBlanklineContextStart = { c.theme, nil, 'nocombine', nil },
         IndentBlanklineChar = {
-            isDark and c.vscLineNumber or c.vscTabOther,
+            c.vscLineNumber,
             nil,
             'nocombine',
             nil,
         },
         IndentBlanklineSpaceChar = {
-            isDark and c.vscLineNumber or c.vscTabOther,
+            c.vscLineNumber,
             nil,
             'nocombine',
             nil,
         },
         IndentBlanklineSpaceCharBlankline = {
-            isDark and c.vscLineNumber or c.vscTabOther,
+            c.vscLineNumber,
             nil,
             'nocombine',
             nil,
@@ -510,84 +509,47 @@ theme.load_syntax = function()
         CmpItemKindConstructor = { c.vscUiOrange, nil, 'none', nil },
         CmpItemAbbrDeprecated = { c.vscCursorDark, c.vscPopupBack, 'strikethrough', nil },
         CmpItemAbbrMatch = {
-            isDark and c.vscBlue or c.vscDarkBlue,
+            c.vscBlue,
             c.vscPopupBack,
             'bold',
             nil,
         },
     }
 
-    if isDark then
-        syntax.NvimTreeFolderIcon = { c.theme, nil, 'none', nil }
-        syntax.NvimTreeIndentMarker = { c.vscLineNumber, nil, 'none', nil }
+    syntax.NvimTreeFolderIcon = { c.theme, nil, 'none', nil }
+    syntax.NvimTreeIndentMarker = { c.vscLineNumber, nil, 'none', nil }
 
-        syntax.LspFloatWinNormal = { c.vscFront, nil, 'none', nil }
-        syntax.LspFloatWinBorder = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaHoverBorder = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaSignatureHelpBorder = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaCodeActionBorder = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaDefPreviewBorder = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspLinesDiagBorder = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaRenameBorder = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaBorderTitle = { c.vscCursorDark, nil, 'none', nil }
-        syntax.LSPSagaDiagnosticTruncateLine = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaDiagnosticBorder = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaDiagnosticBorder = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaShTruncateLine = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaShTruncateLine = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaDocTruncateLine = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaRenameBorder = { c.vscLineNumber, nil, 'none', nil }
-        syntax.LspSagaLspFinderBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspFloatWinNormal = { c.vscFront, nil, 'none', nil }
+    syntax.LspFloatWinBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaHoverBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaSignatureHelpBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaCodeActionBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaDefPreviewBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspLinesDiagBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaRenameBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaBorderTitle = { c.vscCursorDark, nil, 'none', nil }
+    syntax.LSPSagaDiagnosticTruncateLine = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaDiagnosticBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaDiagnosticBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaShTruncateLine = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaShTruncateLine = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaDocTruncateLine = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaRenameBorder = { c.vscLineNumber, nil, 'none', nil }
+    syntax.LspSagaLspFinderBorder = { c.vscLineNumber, nil, 'none', nil }
 
-        syntax.TelescopePromptBorder = { c.theme, nil, 'none', nil }
-        syntax.TelescopeResultsBorder = { c.theme, nil, 'none', nil }
-        syntax.TelescopePreviewBorder = { c.theme, nil, 'none', nil }
-        syntax.TelescopeNormal = { c.vscFront, nil, 'none', nil }
-        syntax.TelescopeSelection = { c.vscFront, c.vscPopupHighlightBlue, 'none', nil }
-        syntax.TelescopeMultiSelection = { c.vscFront, c.vscPopupHighlightBlue, 'none', nil }
-        syntax.TelescopeMatching = { c.vscMediumBlue, nil, 'bold', nil }
-        syntax.TelescopePromptPrefix = { c.vscFront, nil, 'none', nil }
+    syntax.TelescopePromptBorder = { c.theme, nil, 'none', nil }
+    syntax.TelescopeResultsBorder = { c.theme, nil, 'none', nil }
+    syntax.TelescopePreviewBorder = { c.theme, nil, 'none', nil }
+    syntax.TelescopeNormal = { c.vscFront, nil, 'none', nil }
+    syntax.TelescopeSelection = { c.vscFront, c.vscPopupHighlightBlue, 'none', nil }
+    syntax.TelescopeMultiSelection = { c.vscFront, c.vscPopupHighlightBlue, 'none', nil }
+    syntax.TelescopeMatching = { c.vscMediumBlue, nil, 'bold', nil }
+    syntax.TelescopePromptPrefix = { c.vscFront, nil, 'none', nil }
 
-        -- symbols-outline
-        -- white fg and lualine blue bg
-        syntax.FocusedSymbol = { '#ffffff', c.vscUiBlue, 'none', nil }
-        syntax.SymbolsOutlineConnector = { c.vscLineNumber, nil, 'none', nil }
-    else
-        syntax.NvimTreeFolderIcon = { c.vscDarkBlue, nil, 'none', nil }
-        syntax.NvimTreeIndentMarker = { c.vscTabOther, nil, 'none', nil }
-
-        syntax.LspFloatWinNormal = { c.vscFront, nil, 'none', nil }
-        syntax.LspFloatWinBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaHoverBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaSignatureHelpBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaCodeActionBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaDefPreviewBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspLinesDiagBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaRenameBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaBorderTitle = { c.vscCursorDark, nil, 'none', nil }
-        syntax.LSPSagaDiagnosticTruncateLine = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaDiagnosticBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaDiagnosticBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaShTruncateLine = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaShTruncateLine = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaDocTruncateLine = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaRenameBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.LspSagaLspFinderBorder = { c.vscTabOther, nil, 'none', nil }
-
-        syntax.TelescopePromptBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.TelescopeResultsBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.TelescopePreviewBorder = { c.vscTabOther, nil, 'none', nil }
-        syntax.TelescopeNormal = { c.vscFront, nil, 'none', nil }
-        syntax.TelescopeSelection = { c.vscBack, c.vscPopupHighlightBlue, 'none', nil }
-        syntax.TelescopeMultiSelection = { c.vscBack, c.vscPopupHighlightBlue, 'none', nil }
-        syntax.TelescopeMatching = { c.vscDarkBlue, nil, 'bold', nil }
-        syntax.TelescopePromptPrefix = { c.vscFront, nil, 'none', nil }
-
-        -- symbols-outline
-        -- white fg and lualine blue bg
-        syntax.FocusedSymbol = { c.vscBack, '#AF00DB', 'none', nil }
-        syntax.SymbolsOutlineConnector = { c.vscTabOther, nil, 'none', nil }
-    end
+    -- symbols-outline
+    -- white fg and lualine blue bg
+    syntax.FocusedSymbol = { '#ffffff', c.vscUiBlue, 'none', nil }
+    syntax.SymbolsOutlineConnector = { c.vscLineNumber, nil, 'none', nil }
 
     -- Support for legacy config keys (Neovim<=0.5.1)
     syntax.LspDiagnosticsDefaultError = syntax.DiagnosticError
