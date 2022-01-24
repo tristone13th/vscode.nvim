@@ -7,6 +7,7 @@ theme.load_syntax = function()
     local syntax = {
         -- GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL
         Normal = { c.vscFront, c.vscBack, 'none', nil },
+        NormalFloat = { c.theme, c.vscBack, 'none', nil },
         ColorColumn = { nil, c.vscCursorDarkDark, 'none', nil },
         Cursor = { c.vscCursorDark, c.vscCursorLight, 'none', nil },
         CursorLine = { nil, c.vscCursorDarkDark, 'none', nil },
@@ -426,6 +427,9 @@ theme.load_syntax = function()
         -- NvimTreeVertSplit = { c.vscBack, c.vscBack, 'none', nil },
         -- NvimTreeEndOfBuffer = { c.vscLeftDark, nil, 'none', nil },
         -- NvimTreeOpenedFolderName = { nil, c.vscLeftDark, 'none', nil },
+
+        -- Aerial
+        AerialLine = { c.vscBack, c.theme, 'none', nil },
 
         -- bqf
         BqfPreviewBorder = { c.theme, nil, 'none', nil },
