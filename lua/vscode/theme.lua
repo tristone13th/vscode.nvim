@@ -563,6 +563,12 @@ theme.load_syntax = function()
     syntax.FocusedSymbol = { '#ffffff', c.vscUiBlue, 'none', nil }
     syntax.SymbolsOutlineConnector = { c.vscLineNumber, nil, 'none', nil }
 
+    -- LSP
+    syntax.LspDiagnosticsSignError = syntax.DiagnosticError
+    syntax.LspDiagnosticsSignWarning = syntax.DiagnosticWarn
+    syntax.LspDiagnosticsSignInformation = syntax.DiagnosticInfo
+    syntax.LspDiagnosticsSignHint = syntax.DiagnosticHint
+
     -- Support for legacy config keys (Neovim<=0.5.1)
     syntax.LspDiagnosticsDefaultError = syntax.DiagnosticError
     syntax.LspDiagnosticsDefaultHint = syntax.DiagnosticHint
