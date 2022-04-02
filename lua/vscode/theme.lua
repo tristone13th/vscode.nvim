@@ -29,7 +29,7 @@ theme.load_syntax = function()
         MatchParen = { c.vscNone, c.vscCursorDark, 'none', nil },
         ModeMsg = { c.vscFront, c.vscLeftDark, 'none', nil },
         MoreMsg = { c.vscFront, c.vscLeftDark, 'none', nil },
-        NonText = { c.vscLineNumber, c.vscBack, 'none', nil },
+        NonText = { c.vscLineNumber, nil, 'none', nil }, -- git blame text
         Pmenu = { c.vscPopupFront, c.vscPopupBack, 'none', nil },
         PmenuSel = {
             c.vscPopupFront,
