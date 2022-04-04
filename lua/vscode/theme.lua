@@ -443,7 +443,7 @@ theme.load_syntax = function()
 
         -- NeoTree
         NeoTreeDirectoryIcon = { c.theme, nil, 'none', nil },
-        NeoTreeTitleBar = {c.vscBack, c.theme, 'none', nil},
+        NeoTreeTitleBar = { c.vscBack, c.theme, 'none', nil },
 
         -- ScrollView
         ScrollView = { c.theme, c.theme, 'none', nil },
