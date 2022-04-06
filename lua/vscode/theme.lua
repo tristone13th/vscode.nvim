@@ -549,6 +549,7 @@ theme.load_syntax = function()
     syntax.LspSagaRenameBorder = { c.vscLineNumber, nil, 'none', nil }
     syntax.LspSagaLspFinderBorder = { c.vscLineNumber, nil, 'none', nil }
 
+    -- telescope
     syntax.TelescopePromptBorder = { c.theme, nil, 'none', nil }
     syntax.TelescopeResultsBorder = { c.theme, nil, 'none', nil }
     syntax.TelescopePreviewBorder = { c.theme, nil, 'none', nil }
@@ -557,6 +558,7 @@ theme.load_syntax = function()
     syntax.TelescopeMultiSelection = { c.vscFront, c.vscPopupHighlightBlue, 'none', nil }
     syntax.TelescopeMatching = { c.vscMediumBlue, nil, 'bold', nil }
     syntax.TelescopePromptPrefix = { c.vscFront, nil, 'none', nil }
+    syntax.TelescopeResultsLineNr = { c.vscFront, nil, 'none', nil }
 
     -- symbols-outline
     -- white fg and lualine blue bg
