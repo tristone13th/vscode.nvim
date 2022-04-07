@@ -451,9 +451,7 @@ theme.load_syntax = function()
         -- vim-floaterm
         FloatermBorder = { c.theme, c.vscBack, 'none', nil },
 
-        -- Bufferline
-        BufferLineIndicatorSelected = { c.theme, c.theme, 'none', nil },
-        BufferLineFill = { c.theme, c.theme, 'none', nil },
+        -- Bufferline cannot set by this
 
         -- BarBar
         BufferCurrent = { c.vscFront, c.vscTabCurrent, 'none', nil },
