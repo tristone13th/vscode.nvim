@@ -557,6 +557,7 @@ theme.load_syntax = function()
     syntax.TelescopeMatching = { c.vscMediumBlue, nil, 'bold', nil }
     syntax.TelescopePromptPrefix = { c.vscFront, nil, 'none', nil }
     syntax.TelescopeResultsLineNr = { c.vscFront, nil, 'none', nil }
+    syntax.TelescopeResultsStruct = { c.typeFg, nil, 'none', nil }
 
     -- symbols-outline
     -- white fg and lualine blue bg
