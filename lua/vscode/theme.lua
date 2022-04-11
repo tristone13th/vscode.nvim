@@ -7,10 +7,10 @@ theme.load_syntax = function()
     local syntax = {
         -- GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL
         Normal = { c.vscFront, c.vscBack, 'none', nil },
-        NormalFloat = { c.theme, c.vscBack, 'none', nil },
+        NormalFloat = { c.vscFront, c.vscPopupBack, 'none', nil },
         ColorColumn = { nil, c.vscCursorDarkDark, 'none', nil },
         Cursor = { c.vscCursorDark, c.vscCursorLight, 'none', nil },
-        CursorLine = { nil, c.vscCursorDarkDark, 'none', nil },
+        CursorLine = { nil, c.vscPopupBack, 'none', nil },
         CursorColumn = { nil, c.vscCursorDarkDark, 'none', nil },
         Directory = { c.vscBlue, c.vscBack, 'none', nil },
         DiffAdd = { nil, c.vscDiffGreenLight, 'none', nil },
@@ -443,10 +443,18 @@ theme.load_syntax = function()
 
         -- NeoTree
         NeoTreeDirectoryIcon = { c.theme, nil, 'none', nil },
+        NeoTreeDirectoryName = { c.vscFront, nil, 'none', nil },
         NeoTreeTitleBar = { c.vscBack, c.theme, 'none', nil },
+        NeoTreeFloatBorder = { c.theme, c.vscBack, 'none', nil },
+        NeoTreeNormal = { c.vscFront, c.vscBack, 'none', nil },
 
         -- ScrollView
         ScrollView = { c.theme, c.theme, 'none', nil },
+
+        -- nvim-cmp
+        CmpItemAbbr = { c.vscFront, nil, 'none', nil },
+        CmpItemAbbrMatch = { c.theme, nil, 'none', nil },
+        CmpItemAbbrMatchFuzzy = { c.theme, nil, 'none', nil },
 
         -- vim-floaterm
         FloatermBorder = { c.theme, c.vscBack, 'none', nil },
@@ -506,24 +514,6 @@ theme.load_syntax = function()
         LspReferenceText = { nil, c.vscPopupHighlightGray, 'none', nil },
         LspReferenceRead = { nil, c.vscPopupHighlightGray, 'none', nil },
         LspReferenceWrite = { nil, c.vscPopupHighlightGray, 'none', nil },
-
-        -- Nvim compe
-        CmpItemKindVariable = { c.vscLightBlue, nil, 'none', nil },
-        CmpItemKindInterface = { c.vscLightBlue, nil, 'none', nil },
-        CmpItemKindText = { c.vscLightBlue, nil, 'none', nil },
-        CmpItemKindFunction = { c.vscPink, nil, 'none', nil },
-        CmpItemKindMethod = { c.vscPink, nil, 'none', nil },
-        CmpItemKindKeyword = { c.vscFront, nil, 'none', nil },
-        CmpItemKindProperty = { c.vscFront, nil, 'none', nil },
-        CmpItemKindUnit = { c.vscFront, nil, 'none', nil },
-        CmpItemKindConstructor = { c.vscUiOrange, nil, 'none', nil },
-        CmpItemAbbrDeprecated = { c.vscCursorDark, c.vscPopupBack, 'strikethrough', nil },
-        CmpItemAbbrMatch = {
-            c.vscBlue,
-            c.vscPopupBack,
-            'bold',
-            nil,
-        },
     }
 
     syntax.NvimTreeFolderIcon = { c.theme, nil, 'none', nil }
@@ -588,27 +578,6 @@ theme.link_highlight = function()
     vim.api.nvim_command('highlight link diffAdded DiffAdd')
     vim.api.nvim_command('highlight link diffChanged DiffChange')
     vim.api.nvim_command('highlight link diffRemoved DiffDelete')
-    -- Nvim compe
-    vim.api.nvim_command('highlight link CompeDocumentation Pmenu')
-    vim.api.nvim_command('highlight link CompeDocumentationBorder Pmenu')
-    vim.api.nvim_command('highlight link CmpItemKind Pmenu')
-    vim.api.nvim_command('highlight link CmpItemAbbr Pmenu')
-    vim.api.nvim_command('highlight link CmpItemKindClass CmpItemKindConstructor')
-    vim.api.nvim_command('highlight link CmpItemKindModule CmpItemKindKeyword')
-    vim.api.nvim_command('highlight link CmpItemKindOperator TSOperator')
-    vim.api.nvim_command('highlight link CmpItemKindReference TSParameterReference')
-    vim.api.nvim_command('highlight link CmpItemKindValue TSField')
-    vim.api.nvim_command('highlight link CmpItemKindField TSField')
-    vim.api.nvim_command('highlight link CmpItemKindEnum TSField')
-    vim.api.nvim_command('highlight link CmpItemKindSnippet TSText')
-    vim.api.nvim_command('highlight link CmpItemKindColor cssColor')
-    vim.api.nvim_command('highlight link CmpItemKindFile TSURI')
-    vim.api.nvim_command('highlight link CmpItemKindFolder TSURI')
-    vim.api.nvim_command('highlight link CmpItemKindEvent TSConstant')
-    vim.api.nvim_command('highlight link CmpItemKindEnumMember TSField')
-    vim.api.nvim_command('highlight link CmpItemKindConstant TSConstant')
-    vim.api.nvim_command('highlight link CmpItemKindStruct TSStructure')
-    vim.api.nvim_command('highlight link CmpItemKindTypeParameter TSParameter')
 end
 
 return theme
