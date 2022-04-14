@@ -428,9 +428,6 @@ theme.load_syntax = function()
         -- NvimTreeEndOfBuffer = { c.vscLeftDark, nil, 'none', nil },
         -- NvimTreeOpenedFolderName = { nil, c.vscLeftDark, 'none', nil },
 
-        -- Aerial
-        AerialLine = { c.vscBack, c.theme, 'none', nil },
-
         -- bqf
         BqfPreviewBorder = { c.theme, nil, 'none', nil },
         -- BqfPreviewFloat = { c.vscPink, nil, 'none', nil },
@@ -455,6 +452,7 @@ theme.load_syntax = function()
         CmpItemAbbr = { c.vscFront, nil, 'none', nil },
         CmpItemAbbrMatch = { c.theme, nil, 'none', nil },
         CmpItemAbbrMatchFuzzy = { c.theme, nil, 'none', nil },
+        CmpCompletionBorder = { c.theme, nil, 'none', nil },
 
         -- vim-floaterm
         FloatermBorder = { c.theme, c.vscBack, 'none', nil },
