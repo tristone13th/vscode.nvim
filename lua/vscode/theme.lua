@@ -7,7 +7,8 @@ theme.load_syntax = function()
     local syntax = {
         -- GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL
         Normal = { c.vscFront, c.vscBack, 'none', nil },
-        NormalFloat = { c.vscFront, c.vscPopupBack, 'none', nil },
+        NormalFloat = { c.vscFront, nil, 'none', nil },
+        FloatBorder = { c.theme, nil, 'none', nil }, -- border of float window
         ColorColumn = { nil, c.vscCursorDarkDark, 'none', nil },
         Cursor = { c.vscCursorDark, c.vscCursorLight, 'none', nil },
         CursorLine = { nil, c.vscPopupBack, 'none', nil },
@@ -436,7 +437,6 @@ theme.load_syntax = function()
 
         -- Signature
         LspSignatureActiveParameter = { c.opFg, nil, 'none', nil },
-        FloatBorder = { c.theme, nil, 'none', nil },
 
         -- NeoTree
         NeoTreeDirectoryIcon = { c.theme, nil, 'none', nil },
@@ -488,7 +488,7 @@ theme.load_syntax = function()
             nil,
         },
         IndentBlanklineSpaceChar = {
-            c.vscLineNumber,
+            c.opFg,
             nil,
             'nocombine',
             nil,
