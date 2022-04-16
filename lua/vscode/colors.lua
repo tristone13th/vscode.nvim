@@ -2,14 +2,11 @@ local generate = function()
     local colors = {}
     colors = {
         theme = '#ee8241',
-        functionFg = '#abd166',
-        commentFg = '#c99677',
-        typeFg = '#ee8241',
-        keywordFg = '#9cdcfe',
-        opFg = '#9cdcfe',
-        condFg = '#f7397d',
-        repeatFg = '#f7397d',
-        importFg = '#f7397d',
+        themeGreen = '#abd166',
+        themeBrown = '#c99677',
+        themeBlue = '#9cdcfe',
+        themeRed = '#f7397d',
+
         paraFg = '#fa9f50',
         numFg = '#b5cea8',
 
