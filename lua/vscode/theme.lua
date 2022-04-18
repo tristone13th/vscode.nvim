@@ -481,6 +481,9 @@ theme.load_syntax = function()
             nil,
         },
 
+        -- diffview
+        DiffviewFolderName = { c.theme, nil, 'none', nil},
+
         -- LSP
         DiagnosticError = { c.vscRed, nil, 'none', nil },
         DiagnosticWarn = { c.vscYellow, nil, 'none', nil },
