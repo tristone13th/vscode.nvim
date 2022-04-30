@@ -97,8 +97,7 @@ theme.load_syntax = function()
 
         -- Treesitter
         TSError = { c.vscRed, nil, 'none', nil },
-        TSPunctBracket = { c.vscFront, nil, 'none', nil },
-        TSPunctSpecial = { c.vscFront, nil, 'none', nil },
+        TSPunctBracket = { c.vscFront, nil, 'none', nil }, TSPunctSpecial = { c.vscFront, nil, 'none', nil },
         markdownTSPunctSpecial = { c.vscBlue, nil, 'bold', nil },
         TSConstant = { c.vscYellow, nil, 'none', nil },
         TSConstBuiltin = { c.theme, nil, 'none', nil },
@@ -188,16 +187,6 @@ theme.load_syntax = function()
         htmlSpecialTagName = { c.vscBlue, nil, 'none', nil },
         htmlArg = { c.vscLightBlue, nil, 'none', nil },
 
-        -- PHP
-        phpStaticClasses = { c.vscBlueGreen, nil, 'none', nil },
-        phpMethod = { c.vscYellow, nil, 'none', nil },
-        phpClass = { c.vscBlueGreen, nil, 'none', nil },
-        phpFunction = { c.vscYellow, nil, 'none', nil },
-        phpInclude = { c.vscBlue, nil, 'none', nil },
-        phpUseClass = { c.vscBlueGreen, nil, 'none', nil },
-        phpRegion = { c.vscBlueGreen, nil, 'none', nil },
-        phpMethodsVar = { c.vscLightBlue, nil, 'none', nil },
-
         -- CSS
         cssBraces = { c.vscFront, nil, 'none', nil },
         cssInclude = { c.vscPink, nil, 'none', nil },
@@ -245,108 +234,10 @@ theme.load_syntax = function()
         jsSpreadOperator = { c.vscLightBlue, nil, 'none', nil },
         jsSpreadExpression = { c.vscLightBlue, nil, 'none', nil },
 
-        -- Typescript
-        typescriptLabel = { c.vscLightBlue, nil, 'none', nil },
-        typescriptExceptions = { c.vscLightBlue, nil, 'none', nil },
-        typescriptBraces = { c.vscFront, nil, 'none', nil },
-        typescriptEndColons = { c.vscLightBlue, nil, 'none', nil },
-        typescriptParens = { c.vscFront, nil, 'none', nil },
-        typescriptDocTags = { c.vscBlue, nil, 'none', nil },
-        typescriptDocComment = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptLogicSymbols = { c.vscLightBlue, nil, 'none', nil },
-        typescriptImport = { c.vscPink, nil, 'none', nil },
-        typescriptBOM = { c.vscLightBlue, nil, 'none', nil },
-        typescriptVariableDeclaration = { c.vscLightBlue, nil, 'none', nil },
-        typescriptVariable = { c.vscBlue, nil, 'none', nil },
-        typescriptExport = { c.vscPink, nil, 'none', nil },
-        typescriptAliasDeclaration = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptAliasKeyword = { c.vscBlue, nil, 'none', nil },
-        typescriptClassName = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptAccessibilityModifier = { c.vscBlue, nil, 'none', nil },
-        typescriptOperator = { c.vscBlue, nil, 'none', nil },
-        typescriptArrowFunc = { c.vscBlue, nil, 'none', nil },
-        typescriptMethodAccessor = { c.vscBlue, nil, 'none', nil },
-        typescriptMember = { c.vscYellow, nil, 'none', nil },
-        typescriptTypeReference = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptTemplateSB = { c.vscYellowOrange, nil, 'none', nil },
-        typescriptArrowFuncArg = { c.vscLightBlue, nil, 'none', nil },
-        typescriptParamImpl = { c.vscLightBlue, nil, 'none', nil },
-        typescriptFuncComma = { c.vscLightBlue, nil, 'none', nil },
-        typescriptCastKeyword = { c.vscLightBlue, nil, 'none', nil },
-        typescriptCall = { c.vscBlue, nil, 'none', nil },
-        typescriptCase = { c.vscLightBlue, nil, 'none', nil },
-        typescriptReserved = { c.vscPink, nil, 'none', nil },
-        typescriptDefault = { c.vscLightBlue, nil, 'none', nil },
-        typescriptDecorator = { c.vscYellow, nil, 'none', nil },
-        typescriptPredefinedType = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptClassHeritage = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptClassExtends = { c.vscBlue, nil, 'none', nil },
-        typescriptClassKeyword = { c.vscBlue, nil, 'none', nil },
-        typescriptBlock = { c.vscLightBlue, nil, 'none', nil },
-        typescriptDOMDocProp = { c.vscLightBlue, nil, 'none', nil },
-        typescriptTemplateSubstitution = { c.vscLightBlue, nil, 'none', nil },
-        typescriptClassBlock = { c.vscLightBlue, nil, 'none', nil },
-        typescriptFuncCallArg = { c.vscLightBlue, nil, 'none', nil },
-        typescriptIndexExpr = { c.vscLightBlue, nil, 'none', nil },
-        typescriptConditionalParen = { c.vscLightBlue, nil, 'none', nil },
-        typescriptArray = { c.vscYellow, nil, 'none', nil },
-        typescriptES6SetProp = { c.vscLightBlue, nil, 'none', nil },
-        typescriptObjectLiteral = { c.vscLightBlue, nil, 'none', nil },
-        typescriptTypeParameter = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptEnumKeyword = { c.vscBlue, nil, 'none', nil },
-        typescriptEnum = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptLoopParen = { c.vscLightBlue, nil, 'none', nil },
-        typescriptParenExp = { c.vscLightBlue, nil, 'none', nil },
-        typescriptModule = { c.vscLightBlue, nil, 'none', nil },
-        typescriptAmbientDeclaration = { c.vscBlue, nil, 'none', nil },
-        typescriptFuncTypeArrow = { c.vscBlue, nil, 'none', nil },
-        typescriptInterfaceHeritage = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptInterfaceName = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptInterfaceKeyword = { c.vscBlue, nil, 'none', nil },
-        typescriptInterfaceExtends = { c.vscBlue, nil, 'none', nil },
-        typescriptGlobal = { c.vscBlueGreen, nil, 'none', nil },
-        typescriptAsyncFuncKeyword = { c.vscBlue, nil, 'none', nil },
-        typescriptFuncKeyword = { c.vscBlue, nil, 'none', nil },
-        typescriptGlobalMethod = { c.vscYellow, nil, 'none', nil },
-        typescriptPromiseMethod = { c.vscYellow, nil, 'none', nil },
-
         -- XML
         xmlTag = { c.vscBlueGreen, nil, 'none', nil },
         xmlTagName = { c.vscBlueGreen, nil, 'none', nil },
         xmlEndTag = { c.vscBlueGreen, nil, 'none', nil },
-
-        -- Ruby
-        rubyClassNameTag = { c.vscBlueGreen, nil, 'none', nil },
-        rubyClassName = { c.vscBlueGreen, nil, 'none', nil },
-        rubyModuleName = { c.vscBlueGreen, nil, 'none', nil },
-        rubyConstant = { c.vscBlueGreen, nil, 'none', nil },
-
-        -- Golang
-        goPackage = { c.vscBlue, nil, 'none', nil },
-        goImport = { c.vscBlue, nil, 'none', nil },
-        goVar = { c.vscBlue, nil, 'none', nil },
-        goConst = { c.vscBlue, nil, 'none', nil },
-        goStatement = { c.vscPink, nil, 'none', nil },
-        goType = { c.vscBlueGreen, nil, 'none', nil },
-        goSignedInts = { c.vscBlueGreen, nil, 'none', nil },
-        goUnsignedInts = { c.vscBlueGreen, nil, 'none', nil },
-        goFloats = { c.vscBlueGreen, nil, 'none', nil },
-        goComplexes = { c.vscBlueGreen, nil, 'none', nil },
-        goBuiltins = { c.vscYellow, nil, 'none', nil },
-        goBoolean = { c.vscBlue, nil, 'none', nil },
-        goPredefinedIdentifiers = { c.vscBlue, nil, 'none', nil },
-        goTodo = { c.vscGreen, nil, 'none', nil },
-        goDeclaration = { c.vscBlue, nil, 'none', nil },
-        goDeclType = { c.vscBlue, nil, 'none', nil },
-        goTypeDecl = { c.vscBlue, nil, 'none', nil },
-        goTypeName = { c.vscBlueGreen, nil, 'none', nil },
-        goVarAssign = { c.vscLightBlue, nil, 'none', nil },
-        goVarDefs = { c.vscLightBlue, nil, 'none', nil },
-        goReceiver = { c.vscFront, nil, 'none', nil },
-        goReceiverType = { c.vscFront, nil, 'none', nil },
-        goFunctionCall = { c.vscYellow, nil, 'none', nil },
-        goMethodCall = { c.vscYellow, nil, 'none', nil },
-        goSingleDecl = { c.vscLightBlue, nil, 'none', nil },
 
         -- Python
         pythonStatement = { c.vscBlue, nil, 'none', nil },
@@ -360,6 +251,7 @@ theme.load_syntax = function()
         pythonTodo = { c.vscBlue, nil, 'none', nil },
         pythonClassVar = { c.vscBlue, nil, 'none', nil },
         pythonClassDef = { c.vscBlueGreen, nil, 'none', nil },
+
         -- TeX
         texStatement = { c.vscBlue, nil, 'none', nil },
         texBeginEnd = { c.vscYellow, nil, 'none', nil },
@@ -393,19 +285,9 @@ theme.load_syntax = function()
         shDeref = { c.vscLightBlue, nil, 'none', nil },
         shVariable = { c.vscLightBlue, nil, 'none', nil },
 
-        -- SQL
-        sqlKeyword = { c.vscPink, nil, 'none', nil },
-        sqlFunction = { c.vscYellowOrange, nil, 'none', nil },
-        sqlOperator = { c.vscPink, nil, 'none', nil },
-
         -- YAML
         yamlKey = { c.vscBlue, nil, 'none', nil },
         yamlConstant = { c.vscBlue, nil, 'none', nil },
-
-        -- Gitgutter
-        GitGutterAdd = { c.vscGreen, nil, 'none', nil },
-        GitGutterChange = { c.vscYellow, nil, 'none', nil },
-        GitGutterDelete = { c.vscRed, nil, 'none', nil },
 
         -- Git Signs
         GitSignsAdd = { c.vscGreen, nil, 'none', nil },
@@ -414,20 +296,6 @@ theme.load_syntax = function()
         GitSignsAddLn = { c.vscBack, c.vscGreen, 'none', nil },
         GitSignsChangeLn = { c.vscBack, c.vscYellow, 'none', nil },
         GitSignsDeleteLn = { c.vscBack, c.vscRed, 'none', nil },
-
-        -- NvimTree
-        -- NvimTreeRootFolder = { c.vscFront, nil, 'bold', nil },
-        -- NvimTreeGitDirty = { c.vscYellow, nil, 'none', nil },
-        -- NvimTreeGitNew = { c.vscGreen, nil, 'none', nil },
-        -- NvimTreeImageFile = { c.vscViolet, nil, 'none', nil },
-        -- NvimTreeEmptyFolderName = { c.vscGray, nil, 'none', nil },
-        -- NvimTreeFolderName = { c.vscFront, nil, 'none', nil },
-        -- NvimTreeSpecialFile = { c.vscPink, nil, 'underline', nil },
-        -- NvimTreeNormal = { c.vscFront, c.vscBack, 'none', nil },
-        -- NvimTreeCursorLine = { nil, c.vscLeftMid, 'none', nil },
-        -- NvimTreeVertSplit = { c.vscBack, c.vscBack, 'none', nil },
-        -- NvimTreeEndOfBuffer = { c.vscLeftDark, nil, 'none', nil },
-        -- NvimTreeOpenedFolderName = { nil, c.vscLeftDark, 'none', nil },
 
         -- bqf
         BqfPreviewBorder = { c.theme, nil, 'none', nil },
@@ -496,70 +364,26 @@ theme.load_syntax = function()
         LspReferenceText = { nil, c.vscPopupHighlightGray, 'none', nil },
         LspReferenceRead = { nil, c.vscPopupHighlightGray, 'none', nil },
         LspReferenceWrite = { nil, c.vscPopupHighlightGray, 'none', nil },
+
+        -- telescope
+        TelescopePromptBorder = { c.theme, nil, 'none', nil },
+        TelescopeResultsBorder = { c.theme, nil, 'none', nil },
+        TelescopePreviewBorder = { c.theme, nil, 'none', nil },
+        TelescopeNormal = { c.vscFront, nil, 'none', nil },
+        TelescopeSelection = { c.vscFront, c.vscPopupHighlightBlue, 'none', nil },
+        TelescopeMultiSelection = { c.vscFront, c.vscPopupHighlightBlue, 'none', nil },
+        TelescopeMatching = { c.vscMediumBlue, nil, 'bold', nil },
+        TelescopePromptPrefix = { c.vscFront, nil, 'none', nil },
+        TelescopeResultsLineNr = { c.vscFront, nil, 'none', nil },
+        TelescopeResultsStruct = { c.theme, nil, 'none', nil },
+
+        -- symbols-outline
+        -- white fg and lualine blue bg
+        FocusedSymbol = { '#ffffff', c.vscUiBlue, 'none', nil },
+        SymbolsOutlineConnector = { c.vscLineNumber, nil, 'none', nil }
     }
 
-    syntax.NvimTreeFolderIcon = { c.theme, nil, 'none', nil }
-    syntax.NvimTreeIndentMarker = { c.vscLineNumber, nil, 'none', nil }
-
-    syntax.LspFloatWinNormal = { c.vscFront, nil, 'none', nil }
-    syntax.LspFloatWinBorder = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaHoverBorder = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaSignatureHelpBorder = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaCodeActionBorder = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaDefPreviewBorder = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspLinesDiagBorder = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaRenameBorder = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaBorderTitle = { c.vscCursorDark, nil, 'none', nil }
-    syntax.LSPSagaDiagnosticTruncateLine = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaDiagnosticBorder = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaDiagnosticBorder = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaShTruncateLine = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaShTruncateLine = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaDocTruncateLine = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaRenameBorder = { c.vscLineNumber, nil, 'none', nil }
-    syntax.LspSagaLspFinderBorder = { c.vscLineNumber, nil, 'none', nil }
-
-    -- telescope
-    syntax.TelescopePromptBorder = { c.theme, nil, 'none', nil }
-    syntax.TelescopeResultsBorder = { c.theme, nil, 'none', nil }
-    syntax.TelescopePreviewBorder = { c.theme, nil, 'none', nil }
-    syntax.TelescopeNormal = { c.vscFront, nil, 'none', nil }
-    syntax.TelescopeSelection = { c.vscFront, c.vscPopupHighlightBlue, 'none', nil }
-    syntax.TelescopeMultiSelection = { c.vscFront, c.vscPopupHighlightBlue, 'none', nil }
-    syntax.TelescopeMatching = { c.vscMediumBlue, nil, 'bold', nil }
-    syntax.TelescopePromptPrefix = { c.vscFront, nil, 'none', nil }
-    syntax.TelescopeResultsLineNr = { c.vscFront, nil, 'none', nil }
-    syntax.TelescopeResultsStruct = { c.theme, nil, 'none', nil }
-
-    -- symbols-outline
-    -- white fg and lualine blue bg
-    syntax.FocusedSymbol = { '#ffffff', c.vscUiBlue, 'none', nil }
-    syntax.SymbolsOutlineConnector = { c.vscLineNumber, nil, 'none', nil }
-
-    -- LSP
-    syntax.LspDiagnosticsSignError = syntax.DiagnosticError
-    syntax.LspDiagnosticsSignWarning = syntax.DiagnosticWarn
-    syntax.LspDiagnosticsSignInformation = syntax.DiagnosticInfo
-    syntax.LspDiagnosticsSignHint = syntax.DiagnosticHint
-
-    -- Support for legacy config keys (Neovim<=0.5.1)
-    syntax.LspDiagnosticsDefaultError = syntax.DiagnosticError
-    syntax.LspDiagnosticsDefaultHint = syntax.DiagnosticHint
-    syntax.LspDiagnosticsDefaultInformation = syntax.DiagnosticInfo
-    syntax.LspDiagnosticsDefaultWarning = syntax.DiagnosticWarn
-    syntax.LspDiagnosticsUnderlineError = syntax.DiagnosticUnderlineError
-    syntax.LspDiagnosticsUnderlineHint = syntax.DiagnosticUnderlineHint
-    syntax.LspDiagnosticsUnderlineInformation = syntax.DiagnosticUnderlineInfo
-    syntax.LspDiagnosticsUnderlineWarning = syntax.DiagnosticUnderlineWarn
-
     return syntax
-end
-
-theme.link_highlight = function()
-    -- Legacy groups for official git.vim and diff.vim syntax
-    vim.api.nvim_command('highlight link diffAdded DiffAdd')
-    vim.api.nvim_command('highlight link diffChanged DiffChange')
-    vim.api.nvim_command('highlight link diffRemoved DiffDelete')
 end
 
 return theme

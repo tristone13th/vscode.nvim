@@ -25,8 +25,6 @@ utils.load = function()
     for group, color in pairs(syntax) do
         utils.highlight(group, color)
     end
-
-    theme.link_highlight()
 end
 
 return utils
